@@ -1,0 +1,27 @@
+<div class="mat-elevation-z8 mt-3 table-responsive">
+  <div class="d-flex justify-content-between align-items-center p-3 search_form">
+    <mat-form-field appearance="outline" class="w-50 ">
+      <mat-label>Search Files</mat-label>
+      <input [(ngModel)]="textSearch" (keyup)="search($event)" matInput placeholder="File Name">
+      <mat-icon matSuffix *ngIf="!textSearch">search</mat-icon>
+      <button (click)="clearSearch()" mat-icon-button matSuffix *ngIf="textSearch">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button mat-flat-button class="bg-dark text-white" [routerLink]="['/stock/create']">
+      <mat-icon>add</mat-icon>
+      Upload File
+    </button>
+  </div>
+
+  <mat-card class="storage-space">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Storage</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+
+
+
+  
